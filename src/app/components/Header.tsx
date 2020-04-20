@@ -1,3 +1,4 @@
+//これをもとにボタン?? あとドキュメント
 import Link from 'next/link'
 
 export default ({ pathname }: { pathname?: any }) => (

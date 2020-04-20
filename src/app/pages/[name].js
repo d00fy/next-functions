@@ -2,14 +2,14 @@ import React from 'react';
 
 class Result extends React.Component {
     static async getInitialProps({ query }) {
-        const { id } = query
-        return { id }
+        const { name } = query
+        return { name }
     }
 
     constructor(props) {
         super(props);
         this.state = {
-            id: props.id
+            name: props.name
         }
     }
 
@@ -17,7 +17,7 @@ class Result extends React.Component {
         return (
             <>
                 <div>
-                    URLのPathからuserId: {this.state.id}
+                    URLのPathからuserName取得: {this.state.name}
                 </div>
             </>
         )
