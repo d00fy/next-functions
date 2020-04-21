@@ -2,6 +2,7 @@
 //必須
 import React, { Component } from 'react';
 import H1 from '../components/commonParts/title';
+import Radar from '../components/commonParts/Radar';
 
 //Appクラス = Appコンポーネント(カスタムタグ)
 class App extends Component {
@@ -11,7 +12,8 @@ class App extends Component {
       //returnの中にJSXを記載
       <div className="container">
         <H1 />
-        <h2>appコンポ〜ネントはindex.js=/等の読み込み専門</h2>
+        <h2>appコンポネントはindex.js=/等の読み込み専門</h2>
+        <Radar />
         <style jsx>{`
         .container {
           margin: 50px;

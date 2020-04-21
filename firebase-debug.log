@@ -1,0 +1,195 @@
+[debug] [2020-04-21T17:21:52.848Z] ----------------------------------------------------------------------
+[debug] [2020-04-21T17:21:52.850Z] Command:       /Users/uchibayashitakaaki/.anyenv/envs/nodenv/versions/12.7.0/bin/node /Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/node_modules/.bin/firebase serve
+[debug] [2020-04-21T17:21:52.850Z] CLI Version:   7.16.2
+[debug] [2020-04-21T17:21:52.850Z] Platform:      darwin
+[debug] [2020-04-21T17:21:52.850Z] Node Version:  v12.7.0
+[debug] [2020-04-21T17:21:52.857Z] Time:          Wed Apr 22 2020 02:21:52 GMT+0900 (GMT+09:00)
+[debug] [2020-04-21T17:21:52.857Z] ----------------------------------------------------------------------
+[debug] [2020-04-21T17:21:52.857Z] 
+[debug] [2020-04-21T17:21:52.867Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-21T17:21:52.868Z] > authorizing via signed-in user
+[debug] [2020-04-21T17:21:52.868Z] [iam] checking project next-functions-69f3c for permissions ["firebase.projects.get"]
+[debug] [2020-04-21T17:21:52.871Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/next-functions-69f3c:testIamPermissions  
+
+[debug] [2020-04-21T17:21:53.756Z] <<< HTTP RESPONSE 200
+[debug] [2020-04-21T17:21:53.761Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/next-functions-69f3c  
+ 
+[debug] [2020-04-21T17:21:54.161Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type'...
+[info] 
+[debug] [2020-04-21T17:21:54.166Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/next-functions-69f3c/webApps/-/config  
+ 
+[warn] ⚠  Your requested "node" version "10" doesn't match your global version "12"
+[info] ✔  functions: functions emulator started at http://localhost:5001
+[debug] [2020-04-21T17:21:55.391Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions" for Cloud Functions...
+[debug] [2020-04-21T17:21:55.450Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-21T17:21:55.450Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-04-21T17:21:55.450Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-21T17:21:55.451Z] [worker-~diagnostic~-6a5f328b-1b69-4d9d-8fa3-fe18a25865e2]: Assigning socketPath: /var/folders/ng/ffl8wnqn7nn94xpvzgm10ymc0000gn/T/fire_emu_48847.sock
+[debug] [2020-04-21T17:21:55.451Z] [worker-~diagnostic~-6a5f328b-1b69-4d9d-8fa3-fe18a25865e2]: BUSY
+[info] i  hosting: Serving hosting files from: dist/public
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2020-04-21T17:21:55.730Z] [runtime-status] [48847] Functions runtime initialized. {"cwd":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions","node_version":"12.7.0"}
+[debug] [2020-04-21T17:21:55.732Z] [runtime-status] [48847] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-21T17:21:55.735Z] [runtime-status] [48847] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-21T17:21:55.736Z] [runtime-status] [48847] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to /Users/uchibayashitakaaki/Dev/json/speaking.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2020-04-21T17:21:55.738Z] [runtime-status] [48847] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-21T17:21:55.891Z] [worker-~diagnostic~-6a5f328b-1b69-4d9d-8fa3-fe18a25865e2]: IDLE
+[info] ✔  functions[nextApp]: http function initialized (http://localhost:5001/next-functions-69f3c/us-central1/nextApp).
+[info] [hosting] Rewriting / to http://localhost:5001/next-functions-69f3c/us-central1/nextApp for local Function nextApp
+[debug] [2020-04-21T17:21:59.603Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-21T17:21:59.603Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-21T17:21:59.604Z] Accepted request GET /next-functions-69f3c/us-central1/nextApp/ --> nextApp
+[debug] [2020-04-21T17:21:59.623Z] [worker-pool] addWorker(nextApp)
+[debug] [2020-04-21T17:21:59.623Z] [worker-pool] Adding worker with key nextApp, total=1
+[debug] [2020-04-21T17:21:59.623Z] [worker-pool] submitWork(triggerId=nextApp)
+[debug] [2020-04-21T17:21:59.624Z] [worker-nextApp-73e885a5-8681-4f40-9466-51139c017aa5]: Assigning socketPath: /var/folders/ng/ffl8wnqn7nn94xpvzgm10ymc0000gn/T/fire_emu_48856.sock
+[debug] [2020-04-21T17:21:59.624Z] [worker-nextApp-73e885a5-8681-4f40-9466-51139c017aa5]: BUSY
+[debug] [2020-04-21T17:22:00.276Z] [runtime-status] [48856] Functions runtime initialized. {"cwd":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions","node_version":"12.7.0"}
+[debug] [2020-04-21T17:22:00.278Z] [runtime-status] [48856] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-21T17:22:00.281Z] [runtime-status] [48856] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-21T17:22:00.283Z] [runtime-status] [48856] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to /Users/uchibayashitakaaki/Dev/json/speaking.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2020-04-21T17:22:00.284Z] [runtime-status] [48856] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-21T17:22:00.391Z] [runtime-status] [48856] Trigger "nextApp" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "nextApp"
+[debug] [2020-04-21T17:22:00.392Z] [runtime-status] [48856] triggerDefinition {"httpsTrigger":{},"name":"nextApp","entryPoint":"nextApp"}
+[debug] [2020-04-21T17:22:00.392Z] [runtime-status] [48856] Running nextApp in mode HTTPS
+[debug] [2020-04-21T17:22:00.397Z] [runtime-status] [48856] Attempting to listen to socketPath: /var/folders/ng/ffl8wnqn7nn94xpvzgm10ymc0000gn/T/fire_emu_48856.sock
+[debug] [2020-04-21T17:22:00.402Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-21T17:22:00.411Z] [runtime-status] [48856] Ephemeral server handling GET request
+[info] >  File: /next-functions-69f3c/us-central1/nextApp/
+[debug] [2020-04-21T17:22:00.582Z] [runtime-status] [48856] Ephemeral server survived.
+[info] [hosting] Rewriting /_next/static/mdWjLRiGVYfuwkUoyRh7N/pages/index.js to http://localhost:5001/next-functions-69f3c/us-central1/nextApp for local Function nextApp
+[debug] [2020-04-21T17:22:00.631Z] [work-queue] {"queueLength":1,"workRunningCount":1}
+[debug] [2020-04-21T17:22:00.632Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-04-21T17:22:00.632Z] Accepted request GET /next-functions-69f3c/us-central1/nextApp/_next/static/mdWjLRiGVYfuwkUoyRh7N/pages/index.js --> nextApp
+[debug] [2020-04-21T17:22:00.648Z] [worker-pool] addWorker(nextApp)
+[debug] [2020-04-21T17:22:00.648Z] [worker-pool] Adding worker with key nextApp, total=2
+[debug] [2020-04-21T17:22:00.649Z] [worker-pool] submitWork(triggerId=nextApp)
+[debug] [2020-04-21T17:22:00.649Z] [worker-nextApp-bcf15617-3065-4edc-b5c6-d2463b720107]: Assigning socketPath: /var/folders/ng/ffl8wnqn7nn94xpvzgm10ymc0000gn/T/fire_emu_48857.sock
+[debug] [2020-04-21T17:22:00.649Z] [worker-nextApp-bcf15617-3065-4edc-b5c6-d2463b720107]: BUSY
+[info] [hosting] Rewriting /_next/static/mdWjLRiGVYfuwkUoyRh7N/pages/_app.js to http://localhost:5001/next-functions-69f3c/us-central1/nextApp for local Function nextApp
+[debug] [2020-04-21T17:22:00.668Z] [work-queue] {"queueLength":1,"workRunningCount":2}
+[debug] [2020-04-21T17:22:00.668Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-04-21T17:22:00.668Z] Accepted request GET /next-functions-69f3c/us-central1/nextApp/_next/static/mdWjLRiGVYfuwkUoyRh7N/pages/_app.js --> nextApp
+[debug] [2020-04-21T17:22:00.676Z] [worker-pool] addWorker(nextApp)
+[debug] [2020-04-21T17:22:00.677Z] [worker-pool] Adding worker with key nextApp, total=3
+[debug] [2020-04-21T17:22:00.677Z] [worker-pool] submitWork(triggerId=nextApp)
+[debug] [2020-04-21T17:22:00.677Z] [worker-nextApp-05ebcca3-41bf-4d87-a4c9-38d27de3b875]: Assigning socketPath: /var/folders/ng/ffl8wnqn7nn94xpvzgm10ymc0000gn/T/fire_emu_48858.sock
+[debug] [2020-04-21T17:22:00.677Z] [worker-nextApp-05ebcca3-41bf-4d87-a4c9-38d27de3b875]: BUSY
+[info] [hosting] Rewriting /_next/static/chunks/commons.89fff0d89f6b92c175f0.js to http://localhost:5001/next-functions-69f3c/us-central1/nextApp for local Function nextApp
+[debug] [2020-04-21T17:22:00.719Z] [work-queue] {"queueLength":1,"workRunningCount":3}
+[debug] [2020-04-21T17:22:00.719Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-04-21T17:22:00.719Z] Accepted request GET /next-functions-69f3c/us-central1/nextApp/_next/static/chunks/commons.89fff0d89f6b92c175f0.js --> nextApp
+[debug] [2020-04-21T17:22:00.730Z] [worker-pool] addWorker(nextApp)
+[debug] [2020-04-21T17:22:00.730Z] [worker-pool] Adding worker with key nextApp, total=4
+[debug] [2020-04-21T17:22:00.730Z] [worker-pool] submitWork(triggerId=nextApp)
+[debug] [2020-04-21T17:22:00.730Z] [worker-nextApp-9e2e54c2-e7ba-4ef6-8680-87b0ff40bca8]: Assigning socketPath: /var/folders/ng/ffl8wnqn7nn94xpvzgm10ymc0000gn/T/fire_emu_48859.sock
+[debug] [2020-04-21T17:22:00.730Z] [worker-nextApp-9e2e54c2-e7ba-4ef6-8680-87b0ff40bca8]: BUSY
+[info] [hosting] Rewriting /_next/static/runtime/main-037650c22df5af2be414.js to http://localhost:5001/next-functions-69f3c/us-central1/nextApp for local Function nextApp
+[debug] [2020-04-21T17:22:00.747Z] [work-queue] {"queueLength":1,"workRunningCount":4}
+[debug] [2020-04-21T17:22:00.747Z] [work-queue] {"queueLength":0,"workRunningCount":5}
+[debug] [2020-04-21T17:22:00.747Z] Accepted request GET /next-functions-69f3c/us-central1/nextApp/_next/static/runtime/main-037650c22df5af2be414.js --> nextApp
+[debug] [2020-04-21T17:22:00.789Z] [worker-pool] addWorker(nextApp)
+[debug] [2020-04-21T17:22:00.789Z] [worker-pool] Adding worker with key nextApp, total=5
+[debug] [2020-04-21T17:22:00.789Z] [worker-pool] submitWork(triggerId=nextApp)
+[debug] [2020-04-21T17:22:00.789Z] [worker-nextApp-cccab086-55e9-4ab0-a499-7df856e4ec26]: Assigning socketPath: /var/folders/ng/ffl8wnqn7nn94xpvzgm10ymc0000gn/T/fire_emu_48860.sock
+[debug] [2020-04-21T17:22:00.789Z] [worker-nextApp-cccab086-55e9-4ab0-a499-7df856e4ec26]: BUSY
+[info] i  functions: Finished "nextApp" in ~1s
+[debug] [2020-04-21T17:22:00.802Z] [worker-nextApp-73e885a5-8681-4f40-9466-51139c017aa5]: IDLE
+[debug] [2020-04-21T17:22:00.802Z] [work-queue] {"queueLength":0,"workRunningCount":4}
+[debug] [2020-04-21T17:22:01.424Z] [runtime-status] [48860] Functions runtime initialized. {"cwd":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions","node_version":"12.7.0"}
+[debug] [2020-04-21T17:22:01.427Z] [runtime-status] [48860] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-21T17:22:01.430Z] [runtime-status] [48860] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-21T17:22:01.432Z] [runtime-status] [48860] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to /Users/uchibayashitakaaki/Dev/json/speaking.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2020-04-21T17:22:01.434Z] [runtime-status] [48860] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-21T17:22:01.491Z] [runtime-status] [48857] Functions runtime initialized. {"cwd":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions","node_version":"12.7.0"}
+[debug] [2020-04-21T17:22:01.524Z] [runtime-status] [48858] Functions runtime initialized. {"cwd":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions","node_version":"12.7.0"}
+[debug] [2020-04-21T17:22:01.526Z] [runtime-status] [48858] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-21T17:22:01.530Z] [runtime-status] [48858] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-21T17:22:01.532Z] [runtime-status] [48858] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to /Users/uchibayashitakaaki/Dev/json/speaking.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2020-04-21T17:22:01.535Z] [runtime-status] [48858] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-21T17:22:01.543Z] [runtime-status] [48859] Functions runtime initialized. {"cwd":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions","node_version":"12.7.0"}
+[debug] [2020-04-21T17:22:01.545Z] [runtime-status] [48859] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-21T17:22:01.548Z] [runtime-status] [48859] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-21T17:22:01.553Z] [runtime-status] [48857] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-04-21T17:22:01.556Z] [runtime-status] [48857] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-21T17:22:01.557Z] [runtime-status] [48857] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to /Users/uchibayashitakaaki/Dev/json/speaking.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2020-04-21T17:22:01.559Z] [runtime-status] [48857] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-21T17:22:01.592Z] [runtime-status] [48859] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions/node_modules/firebase-functions/lib/index.js"}
+[warn] ⚠  functions: Your GOOGLE_APPLICATION_CREDENTIALS environment variable points to /Users/uchibayashitakaaki/Dev/json/speaking.json. Non-emulated services will access production using these credentials. Be careful!
+[debug] [2020-04-21T17:22:01.599Z] [runtime-status] [48859] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/Users/uchibayashitakaaki/Dev/next-practice/next-firebase-type/dist/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-21T17:22:01.839Z] [runtime-status] [48857] Trigger "nextApp" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "nextApp"
+[debug] [2020-04-21T17:22:01.840Z] [runtime-status] [48857] triggerDefinition {"httpsTrigger":{},"name":"nextApp","entryPoint":"nextApp"}
+[debug] [2020-04-21T17:22:01.840Z] [runtime-status] [48857] Running nextApp in mode HTTPS
+[debug] [2020-04-21T17:22:01.872Z] [runtime-status] [48860] Trigger "nextApp" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "nextApp"
+[debug] [2020-04-21T17:22:01.876Z] [runtime-status] [48860] triggerDefinition {"httpsTrigger":{},"name":"nextApp","entryPoint":"nextApp"}
+[debug] [2020-04-21T17:22:01.877Z] [runtime-status] [48860] Running nextApp in mode HTTPS
+[debug] [2020-04-21T17:22:01.884Z] [runtime-status] [48860] Attempting to listen to socketPath: /var/folders/ng/ffl8wnqn7nn94xpvzgm10ymc0000gn/T/fire_emu_48860.sock
+[debug] [2020-04-21T17:22:01.888Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-21T17:22:01.901Z] [runtime-status] [48860] Ephemeral server handling GET request
+[info] >  File: /next-functions-69f3c/us-central1/nextApp/_next/static/runtime/main-037650c22df5af2be414.js
+[debug] [2020-04-21T17:22:01.918Z] [runtime-status] [48858] Trigger "nextApp" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "nextApp"
+[debug] [2020-04-21T17:22:01.918Z] [runtime-status] [48858] triggerDefinition {"httpsTrigger":{},"name":"nextApp","entryPoint":"nextApp"}
+[debug] [2020-04-21T17:22:01.919Z] [runtime-status] [48858] Running nextApp in mode HTTPS
+[debug] [2020-04-21T17:22:01.927Z] [runtime-status] [48858] Attempting to listen to socketPath: /var/folders/ng/ffl8wnqn7nn94xpvzgm10ymc0000gn/T/fire_emu_48858.sock
+[debug] [2020-04-21T17:22:01.931Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-21T17:22:01.946Z] [runtime-status] [48858] Ephemeral server handling GET request
+[info] >  File: /next-functions-69f3c/us-central1/nextApp/_next/static/mdWjLRiGVYfuwkUoyRh7N/pages/_app.js
+[debug] [2020-04-21T17:22:01.971Z] [runtime-status] [48857] Attempting to listen to socketPath: /var/folders/ng/ffl8wnqn7nn94xpvzgm10ymc0000gn/T/fire_emu_48857.sock
+[debug] [2020-04-21T17:22:01.974Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-21T17:22:02.008Z] [runtime-status] [48857] Ephemeral server handling GET request
+[info] >  File: /next-functions-69f3c/us-central1/nextApp/_next/static/mdWjLRiGVYfuwkUoyRh7N/pages/index.js
+[debug] [2020-04-21T17:22:02.012Z] [runtime-status] [48860] Ephemeral server survived.
+[info] i  functions: Finished "nextApp" in ~1s
+[debug] [2020-04-21T17:22:02.019Z] [worker-nextApp-cccab086-55e9-4ab0-a499-7df856e4ec26]: IDLE
+[debug] [2020-04-21T17:22:02.019Z] [work-queue] {"queueLength":0,"workRunningCount":3}
+[debug] [2020-04-21T17:22:02.021Z] [runtime-status] [48858] Ephemeral server survived.
+[info] i  functions: Finished "nextApp" in ~1s
+[debug] [2020-04-21T17:22:02.024Z] [worker-nextApp-05ebcca3-41bf-4d87-a4c9-38d27de3b875]: IDLE
+[debug] [2020-04-21T17:22:02.024Z] [work-queue] {"queueLength":0,"workRunningCount":2}
+[debug] [2020-04-21T17:22:02.047Z] [runtime-status] [48859] Trigger "nextApp" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "nextApp"
+[debug] [2020-04-21T17:22:02.048Z] [runtime-status] [48859] triggerDefinition {"httpsTrigger":{},"name":"nextApp","entryPoint":"nextApp"}
+[debug] [2020-04-21T17:22:02.048Z] [runtime-status] [48859] Running nextApp in mode HTTPS
+[debug] [2020-04-21T17:22:02.055Z] [runtime-status] [48859] Attempting to listen to socketPath: /var/folders/ng/ffl8wnqn7nn94xpvzgm10ymc0000gn/T/fire_emu_48859.sock
+[debug] [2020-04-21T17:22:02.063Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-21T17:22:02.087Z] [runtime-status] [48859] Ephemeral server handling GET request
+[info] >  File: /next-functions-69f3c/us-central1/nextApp/_next/static/chunks/commons.89fff0d89f6b92c175f0.js
+[debug] [2020-04-21T17:22:02.139Z] [runtime-status] [48857] Ephemeral server survived.
+[info] i  functions: Finished "nextApp" in ~1s
+[debug] [2020-04-21T17:22:02.142Z] [worker-nextApp-bcf15617-3065-4edc-b5c6-d2463b720107]: IDLE
+[debug] [2020-04-21T17:22:02.142Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[info] i  functions: Finished "nextApp" in ~1s
+[debug] [2020-04-21T17:22:02.209Z] [worker-nextApp-9e2e54c2-e7ba-4ef6-8680-87b0ff40bca8]: IDLE
+[debug] [2020-04-21T17:22:02.209Z] [runtime-status] [48859] Ephemeral server survived.
+[debug] [2020-04-21T17:22:02.210Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[info] [hosting] Rewriting /favicon.ico to http://localhost:5001/next-functions-69f3c/us-central1/nextApp for local Function nextApp
+[debug] [2020-04-21T17:22:02.621Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-21T17:22:02.622Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-21T17:22:02.622Z] Accepted request GET /next-functions-69f3c/us-central1/nextApp/favicon.ico --> nextApp
+[debug] [2020-04-21T17:22:02.622Z] [worker-pool] submitWork(triggerId=nextApp)
+[debug] [2020-04-21T17:22:02.622Z] [worker-nextApp-73e885a5-8681-4f40-9466-51139c017aa5]: Assigning socketPath: /var/folders/ng/ffl8wnqn7nn94xpvzgm10ymc0000gn/T/fire_emu_48856.sock
+[debug] [2020-04-21T17:22:02.623Z] [worker-nextApp-73e885a5-8681-4f40-9466-51139c017aa5]: BUSY
+[debug] [2020-04-21T17:22:02.625Z] [runtime-status] [48856] Trigger "nextApp" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "nextApp"
+[debug] [2020-04-21T17:22:02.626Z] [runtime-status] [48856] triggerDefinition {"httpsTrigger":{},"name":"nextApp","entryPoint":"nextApp"}
+[debug] [2020-04-21T17:22:02.626Z] [runtime-status] [48856] Running nextApp in mode HTTPS
+[debug] [2020-04-21T17:22:02.626Z] [runtime-status] [48856] Attempting to listen to socketPath: /var/folders/ng/ffl8wnqn7nn94xpvzgm10ymc0000gn/T/fire_emu_48856.sock
+[debug] [2020-04-21T17:22:02.627Z] [functions] Runtime ready! Sending request!
+[debug] [2020-04-21T17:22:02.633Z] [runtime-status] [48856] Ephemeral server handling GET request
+[info] >  File: /next-functions-69f3c/us-central1/nextApp/favicon.ico
+[debug] [2020-04-21T17:22:02.654Z] [runtime-status] [48856] Ephemeral server survived.
+[info] i  functions: Finished "nextApp" in ~1s
+[debug] [2020-04-21T17:22:02.658Z] [worker-nextApp-73e885a5-8681-4f40-9466-51139c017aa5]: IDLE
+[debug] [2020-04-21T17:22:02.658Z] [work-queue] {"queueLength":0,"workRunningCount":0}
