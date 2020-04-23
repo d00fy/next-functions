@@ -3,15 +3,19 @@
 import React, { Component } from 'react';
 import H1 from '../components/commonParts/title';
 import Radar from '../components/commonParts/Radar';
+import Canvas from './indexParts/Canvas';
 
 //Appクラス = Appコンポーネント(カスタムタグ)
 class App extends Component {
+
+
 
   render() {
     return (
       //returnの中にJSXを記載
       <div className="container">
         <H1 />
+        <Canvas />
         <h2>appコンポネントはindex.js=/等の読み込み専門</h2>
         <Radar />
         <style jsx>{`
