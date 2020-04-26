@@ -27,6 +27,6 @@
     "**/*.tsx",
     "pages/about.js",
     "pages/index.js",
-    "components/indexParts/Canvas.js"
+    "components/indexParts/CanvasOrigin.js"
   ]
 }

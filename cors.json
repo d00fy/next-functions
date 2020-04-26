@@ -1,0 +1,15 @@
+[
+    {
+        "origin": [
+            "http://release-react.appspot.com/",
+            "http://localhost:3000"
+        ],
+        "responseHeader": [
+            "*"
+        ],
+        "method": [
+            "GET"
+        ],
+        "maxAgeSeconds": 86400
+    }
+]

@@ -4,6 +4,13 @@
     ],
     "plugins": [
         "inline-react-svg",
-        "styled-components"
+        [
+            "styled-components",
+            { //かわらんなーー
+                "ssr": true,
+                "displayName": true,
+                "preprocess": false
+            }
+        ]
     ]
 }

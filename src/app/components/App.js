@@ -1,23 +1,18 @@
-//正直このApp.jsいらんけどね...index.jsで読んでるだけだから。
-//必須
 import React, { Component } from 'react';
 import H1 from '../components/commonParts/title';
-import Radar from '../components/commonParts/Radar';
-import Canvas from './indexParts/Canvas';
+import Graph from '../components/indexParts/Graph';
 
-//Appクラス = Appコンポーネント(カスタムタグ)
+import Link from 'next/link'
+
+
 class App extends Component {
-
-
 
   render() {
     return (
       //returnの中にJSXを記載
       <div className="container">
         <H1 />
-        <Canvas />
-        <h2>appコンポネントはindex.js=/等の読み込み専門</h2>
-        <Radar />
+        <Graph />
         <style jsx>{`
         .container {
           margin: 50px;
@@ -28,5 +23,4 @@ class App extends Component {
   }
 }
 
-//他の場所で読み込んで使えるようにexport
 export default App;

@@ -17,7 +17,6 @@ function Layout(props) {
 
           }
           .container{
-            
           }
           .section{
 
