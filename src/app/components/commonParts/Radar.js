@@ -10,6 +10,7 @@ import { GraphContext } from '../commonParts/store';
 import Link from 'next/link'
 
 
+
 //--------------------data options-------------------------
 const options = {
     // maintainAspectRatio: false,
