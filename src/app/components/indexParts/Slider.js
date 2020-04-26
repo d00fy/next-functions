@@ -20,7 +20,18 @@ function valuetext(value) {
 //関数コンポーネント！
 export default function DiscreteSlider() {
     const classes = useStyles();
-    const { eyeCount, handCount, headCount, mouseCount, legCount, heartCount } = useContext(GraphContext)
+    const { eye, eyeCount, hand, handCount, head, headCount, mouse, mouseCount, leg, legCount, heart, heartCount, score, getScore } = useContext(GraphContext)
+    const labelValues = [eye, hand, head, mouse, leg, heart];
+    //-------項目の値
+    function colscore(array) {
+        let sum = array.reduce(function (accumulator, currentValue, ) {
+            return accumulator + currentValue
+        })
+        sum = sum * 10 / 6
+        const result = sum.toFixed(1);
+        getScore(result);
+        return result;
+    }
 
     return (
         <div className={classes.root}>
@@ -31,6 +42,7 @@ export default function DiscreteSlider() {
                 defaultValue={4}
                 getAriaValueText={value => {
                     eyeCount(value);
+                    colscore(labelValues);
                 }}
                 aria-labelledby="discrete-slider"
                 valueLabelDisplay="auto"
@@ -46,6 +58,7 @@ export default function DiscreteSlider() {
                 defaultValue={4}
                 getAriaValueText={value => {
                     handCount(value);
+                    colscore(labelValues);
                 }}
                 aria-labelledby="discrete-slider"
                 valueLabelDisplay="auto"
@@ -61,6 +74,7 @@ export default function DiscreteSlider() {
                 defaultValue={4}
                 getAriaValueText={value => {
                     headCount(value);
+                    colscore(labelValues);
                 }}
                 aria-labelledby="discrete-slider"
                 valueLabelDisplay="auto"
@@ -76,6 +90,7 @@ export default function DiscreteSlider() {
                 defaultValue={4}
                 getAriaValueText={value => {
                     mouseCount(value);
+                    colscore(labelValues);
                 }}
                 aria-labelledby="discrete-slider"
                 valueLabelDisplay="auto"
@@ -91,6 +106,7 @@ export default function DiscreteSlider() {
                 defaultValue={4}
                 getAriaValueText={value => {
                     legCount(value);
+                    colscore(labelValues);
                 }}
                 aria-labelledby="discrete-slider"
                 valueLabelDisplay="auto"
@@ -106,6 +122,7 @@ export default function DiscreteSlider() {
                 defaultValue={4}
                 getAriaValueText={value => {
                     heartCount(value);
+                    colscore(labelValues);
                 }}
                 aria-labelledby="discrete-slider"
                 valueLabelDisplay="auto"

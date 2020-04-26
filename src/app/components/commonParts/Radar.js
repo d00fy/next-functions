@@ -9,7 +9,13 @@ import { GraphContext } from '../commonParts/store';
 
 import Link from 'next/link'
 
+//yarn add firebase & config.js をinitするのみ。
+// import firebase from "firebase";
+// import { firebaseConfig } from "../../../../firebase-config";
+// firebase.initializeApp(firebaseConfig);
 
+// Other file
+import firebase from '../../../../firebase-config';
 
 //--------------------data options-------------------------
 const options = {
@@ -83,26 +89,77 @@ export default function Chart() {
         ctx.fillText(result, 936, 82)
 
         let dx = -200
+        let images;
         for (let i = 0; i < asset.length; i++) {
-            const image1 = await getImagefromCanvas(asset[i]);
-            ctx.drawImage(image1, dx, 0, canvas.width, canvas.height);
+            images = await getImagefromCanvas2(asset[i]);
+            ctx.drawImage(images[0], dx, 0, canvas.width, canvas.height);
             dx = dx + 200;
         }
+        const url = ctx.canvas.toDataURL();
+        return url;
     }
 
-    //--------Canvasを画像として取得(合成結果を描画するfixcanvasに対して行う。)
+    //--------Canvasを画像として取得(合成結果を描画するfixcanvasに対して行う。)というよりも素材のURL化
     function getImagefromCanvas(id) {
+        //この関数はPromise(Obj)を返しているが、Promiseの結果を返していない
         return new Promise((resolve, reject) => {
             const image = new Image();
             const ctx = document.getElementById(id).getContext("2d");
+            //いや、ここでだったのか。
             image.onload = () => resolve(image);
             image.onerror = (e) => reject(e);
             //ポイントはPromiseを利用することです。image.srcでcanvasのデータを画像として登録する際に非同期処理となるため、うまく後続処理が行われません
             image.src = ctx.canvas.toDataURL();
-            // console.log(image.src)
         });
     }
 
+    async function getImagefromCanvas2(id) {
+        //この関数は、promiseの結果(resolveを返している)
+        const image = new Image();
+        const ctx = document.getElementById(id).getContext("2d");
+        image.onload = () => { console.log("ファイルロード完了"); return url };
+        image.onerror = (e) => { console.log(e) };
+        image.src = ctx.canvas.toDataURL();
+        const url = image.src;
+        console.log('relveってるよー')
+        const images = [image, url]
+        return images;
+    }
+
+
+    //---非同期練習
+    // // resolve1!!をreturnしているため、この値がresolveされる
+    // async function resolveSample() {
+    //     return 'resolve!!';
+    // }
+
+    // // resolveSampleがPromiseを返し、resolve!!がresolveされるため
+    // // then()が実行されコンソールにresolve!!が表示される
+    // resolveSample().then(value => {
+    //     console.log(value); // => resolve!!
+    // });
+
+    //ひとまず、、つまり上記の理屈が正しい場合、.thenの中に、firebaseに関する関数を書けばよい。
+    function uploadStorage(url) {
+        // const storage = firebase.storage();
+
+        const sRef = firebase.storage().ref()
+        const uuid = colscore(labelValues);
+        // const fileRef = sRef.child(`${uuid}.png`)
+        const fileRef = sRef.child(`test.png`)
+        //var a = Math.floor(Math.random() * 101);
+        // const storageRef = storage.ref().child(`test/${10}`);
+        //ストレージに保存
+        url = url.substring(22);
+        fileRef.putString(url, "base64").then(function (snapshot) {
+            fileRef.getDownloadURL().then(function (url) {
+                console.log("ok");
+            });
+        });
+    }
+
+
+    //--------
 
     //-------項目の値
     function colscore(array) {
@@ -120,11 +177,21 @@ export default function Chart() {
         <h2>{score}</h2>
         <Radar id="radar" data={data} options={options} />
         <CanvasFusion />
-        <button onClick={() => { concatCanvas('fusion', ['radar', 'origin']) }}>
+        <button onClick={() => {
+            concatCanvas('fusion', ['radar', 'origin']).then(value => {
+                uploadStorage(value);
+                console.log(value); // => resolve!!
+            });
+        }}>
             Canvasの合成 / cloudStorageへ / ページ遷移。。(いけっか?)
             </button>
         <Link href="/[score]" as={`/${score}`}>
-            <a onClick={() => { concatCanvas('fusion', ['radar', 'origin']) }}>診断する(Radarコンポに記述)</a>
+            <a onClick={() => {
+                concatCanvas('fusion', ['radar', 'origin']).then(value => {
+                    uploadStorage(value);
+                    console.log(value); // => resolve!!
+                });
+            }}>診断する(Radarコンポに記述)</a>
         </Link>
     </div>);
 }
