@@ -20,6 +20,13 @@ class Result extends React.Component {
         const imgPath = "https://firebasestorage.googleapis.com/v0/b/release-react.appspot.com/o/original%20copy.png?alt=media&token=69ae2407-b019-455a-a197-73b4943bf4a1";
         return (
             <>
+                <Head
+                    title={"デザイナーステータス" + this.state.score}
+                    description={"UIUXデザイナー"}
+                    keyword={"keywordです"}
+                    image={imgPath}
+                    url={"https://next-functions-69f3c.firebaseapp.com/" + this.state.score}
+                />
                 <div>
                     URLのPathからScoreの取得: {this.state.score}
                 </div>
